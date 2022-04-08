@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>没标题</title>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                background: aqua;
+                text-align: center;
+            }
+        </style>
+        <script>
+            // alert("哈哈")
+            function changeStyle1() {
+                var obj = document.getElementById("test");
+                obj.style.marginTop = randomNum(0,document.body.clientHeight-120) + "px";
+                obj.style.marginLeft = randomNum(0,document.body.clientWidth-100) + "px";
+            }
+            //生成从minNum到maxNum的随机数
+            function randomNum(minNum,maxNum){ 
+                switch(arguments.length){ 
+                    case 1: 
+                        return parseInt(Math.random()*minNum+1,10); 
+                    break; 
+                    case 2: 
+                        return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
+                    break; 
+                        default: 
+                            return 0; 
+                        break; 
+                } 
+            } 
+        </script>
+        </head>
+
+        <body>
+        <div id="test" onmouseover="changeStyle1();">
+            <!-- <img src="滑稽2.gif" alt="" height="100px"/> -->
+            <img src="sw.jpg" alt="" height="100px"/>
+            <p style="font-size: 9px;font-family: '黑体';">来抓我呀~</p>
+        </div>
+        
+        </body>
+</html>
